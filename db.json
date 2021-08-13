@@ -1,0 +1,28 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "text": "You must complete this angular today",
+      "day": "Today",
+      "reminder": true
+    },
+    {
+      "id": 2,
+      "text": "Do Some Laravel",
+      "day": "Tomorow",
+      "reminder": true
+    },
+    {
+      "id": 3,
+      "text": "Improve the Posty App",
+      "day": "Unknown",
+      "reminder": false
+    },
+    {
+      "text": "Add new data",
+      "day": "Today",
+      "reminder": true,
+      "id": 4
+    }
+  ]
+}
