@@ -14,26 +14,33 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class TaskServService {
-  private appUrl = 'http://localhost:5000/tasks';
+  private apiUrl = 'http://localhost:50001/tasks';
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   getTasks(): Observable<TaskInterface[]> {
-    return this.http.get<TaskInterface[]>(this.appUrl);
+    return this.http.get<TaskInterface[]>(this.apiUrl);
   }
 
   deleteTask(task: TaskInterface): Observable<TaskInterface>{
-    const url = `${this.appUrl}/${task.id}`;
+    const url = `${this.apiUrl}/${task.id}`;
     return this.http.delete<TaskInterface>(url);
   }
 
   updateTaskReminder(task: TaskInterface){
-    const url = `${this.appUrl}/${task.id}`;
+    const url = `${this.apiUrl}/${task.id}`;
+    console.log(url);
+    return this.http.put<TaskInterface>(url, task, httpOptions);
+  }
+  
+  updateTask(task: TaskInterface): Observable<TaskInterface>{
+    const url = `${this.apiUrl}/${task.id}`;
+    console.log(url);
     return this.http.put<TaskInterface>(url, task, httpOptions);
   }
 
   addTask(task: TaskInterface): Observable<TaskInterface>{
-    return this.http.post<TaskInterface>(this.appUrl, task, httpOptions);
+    return this.http.post<TaskInterface>(this.apiUrl, task, httpOptions);
   }
 
 }

@@ -7,9 +7,10 @@ import { TaskInterface } from '../../taskInterface';
   styleUrls: ['./task-item.component.css']
 })
 export class TaskItemComponent implements OnInit {
-  @Input() mtask!: TaskInterface;
+  @Input() task!: TaskInterface;
   @Output() onDeleteTask: EventEmitter<TaskInterface> = new EventEmitter();
   @Output() onToggleReminder: EventEmitter<TaskInterface> = new EventEmitter();
+  @Output() onEdit: EventEmitter<TaskInterface> = new EventEmitter();
 
 
   constructor() { }
@@ -23,6 +24,10 @@ export class TaskItemComponent implements OnInit {
 
   onToggle(task: TaskInterface){
     this.onToggleReminder.emit(task);
+  }
+
+  edit(task: TaskInterface) {
+    this.onEdit.emit(task);
   }
 
 }

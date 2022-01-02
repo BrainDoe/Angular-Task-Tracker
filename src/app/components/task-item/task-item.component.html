@@ -1,4 +1,10 @@
-<div [ngClass]="{reminder: mtask.reminder}" class="task" (dblclick)="onToggle(mtask)">
-  <h3>{{ mtask.text }} <span class="del-btn" (click)="onDelete(mtask)">&times;</span></h3>
-  <p>{{ mtask.day }}</p>
+<div [ngClass]="{reminder: task.reminder}" class="task" (dblclick)="onToggle(task)">
+  <div style="display: flex; align-items: center; justify-content: space-between;">
+    <h3>{{ task.text }} </h3>
+    <div>
+      <span class="del-btn" (click)="onDelete(task)">&times;</span>
+      <span (click)="edit(task)" style="color: green;">&#x270F;</span>
+    </div>
+  </div>
+  <p>{{ task.day }}</p>
 </div>

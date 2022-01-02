@@ -13,7 +13,7 @@ import { AddTaskComponent } from './components/add-task/add-task.component';
 import { AboutComponent } from './components/about/about.component';
 import { FooterComponent } from './components/footer/footer.component';
 
-const appRoues: Routes = [
+const appRoutes: Routes = [
   {path: '', component: TasksComponent},
   {path: 'about', component: AboutComponent}
 ]
@@ -33,7 +33,7 @@ const appRoues: Routes = [
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(appRoues, {enableTracing: true})
+    RouterModule.forRoot(appRoutes, {enableTracing: true})
   ],
   providers: [],
   bootstrap: [AppComponent]

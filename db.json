@@ -1,10 +1,10 @@
 {
   "tasks": [
     {
-      "id": 1,
       "text": "You must complete this angular today",
       "day": "Today",
-      "reminder": true
+      "reminder": false,
+      "id": 1
     },
     {
       "id": 2,
@@ -13,16 +13,10 @@
       "reminder": true
     },
     {
-      "id": 3,
-      "text": "Improve the Posty App",
-      "day": "Unknown",
-      "reminder": false
-    },
-    {
-      "text": "Add new data",
+      "text": "Just a new task",
       "day": "Today",
       "reminder": true,
-      "id": 4
+      "id": 3
     }
   ]
 }
